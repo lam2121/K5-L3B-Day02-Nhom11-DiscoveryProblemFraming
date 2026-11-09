@@ -41,28 +41,30 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 
 | Rank | Problem | Vì sao chọn | Điều còn chưa chắc |
 |---:|---|---|---|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
+| 1 | Phân loại và Điều phối Bug | Tần suất xảy ra hằng ngày, điểm nghẽn rõ ràng (15 phút/bug), có thể đo lường ngay bằng tỷ lệ gán đúng người (UI vs API). Mức độ tác động lớn đến cả Dev và CS. | AI có nhận diện đúng lỗi nếu CS mô tả quá chung chung (ví dụ: "app lag") hoặc ảnh chụp màn hình log bị mờ, thiếu thông tin hay không. |
+| 2 | Tổng hợp Feedback khách hàng | Nút thắt tốn nhiều thời gian nhất (120 phút). Việc xử lý, phân loại và tóm tắt dữ liệu chữ không có cấu trúc (unstructured text) là thế mạnh cốt lõi của LLM. | Lượng dữ liệu thô xuất ra từ các kênh có vượt quá giới hạn ngữ cảnh (context window) của mô hình không, và rủi ro AI tự bịa (hallucinate) thêm yêu cầu. |
+| 3 | Tự động hóa Báo cáo Sprint | Quy trình có tính chuẩn hóa cao, là bài toán hoàn hảo để kết hợp giữa Workflow (tự động kéo số liệu) và AI (đọc comment viết narrative). | Các lập trình viên có thói quen cập nhật trạng thái và viết comment lý do trễ hạn chi tiết trên Jira để AI có đủ "nguyên liệu" tổng hợp hay không. |
 
 ### Problem Card #1
 
 | Trường | Nội dung |
 |---|---|
-| Job Story | Khi …, tôi muốn …, để … |
-| Actor | |
-| Thời điểm / bối cảnh | |
-| Quy trình hiện tại (3–7 bước) | |
-| Bottleneck (bước nào, mất bao nhiêu phút) | |
-| Impact (nếu không giải thì sao) | |
-| Success metric (baseline → target) | |
-| Phương án không dùng AI | |
-| Giả thuyết về AI (nếu có) | |
-| Cảm nhận nhanh | No AI / Rule / Workflow / Agent / Chưa biết |
+| Job Story | Khi đến kỳ đánh giá sprint (2 tuần/lần), tôi muốn tổng hợp nhanh tất cả các task đã hoàn thành và còn tồn đọng trên Jira, để báo cáo tiến độ cho Giám đốc mà không phải tự tay lọc và xuất file Excel thủ công. |
+| Actor | Product Manager |
+| Thời điểm / bối cảnh | Chiều thứ Sáu cuối mỗi sprint. |
+| Quy trình hiện tại (3–7 bước) | Gồm 6 bước (Chi tiết xem sơ đồ bên dưới). |
+| Bottleneck (bước nào, mất bao nhiêu phút) | Bước 4 - Viết tóm tắt tình trạng (mất 60 phút do phải tự đọc comment trong các task trễ hạn để bịa ra lý do báo cáo sếp). |
+| Impact (nếu không giải thì sao) | Chiếm nửa ngày làm việc của PM cho việc "data entry", dễ sai sót số liệu, sếp nhận báo cáo trễ vào sát giờ tan làm. |
+| Success metric (baseline → target) | Thời gian làm báo cáo: 165 phút → dưới 20 phút. |
+| Phương án không dùng AI | Setup sẵn Jira Dashboard; Dùng Automation rule tự động xuất webhook ra Google Sheets và dùng hàm Macro để vẽ chart. |
+| Giả thuyết về AI (nếu có) | AI (LLM) có thể đọc danh sách các task "Doing" bị trễ, đọc các comment trao đổi của dev trong đó để tự động tóm tắt thành văn xuôi (narrative) giải thích lý do chậm trễ. |
+| Cảm nhận nhanh | Workflow (cho khâu lấy số) + AI (cho khâu viết narrative) |
 
 Quy trình nháp hiện tại:
 
-```text
+```HIỆN TẠI — 165 phút
+
+[1 Xuất dữ liệu Jira: 10'] → [2 Lọc task To-do/Doing/Done trên Excel: 20'] → [3 Đối chiếu chéo file plan: 30'] → [4 Viết tóm tắt lý do trễ hạn: 60'] ← BOTTLENECK → [5 Làm slide báo cáo: 40'] → [6 Gửi sếp: 5']
 
 ```
 
@@ -70,20 +72,22 @@ Quy trình nháp hiện tại:
 
 | Trường | Nội dung |
 |---|---|
-| Job Story | Khi …, tôi muốn …, để … |
-| Actor | |
-| Thời điểm / bối cảnh | |
-| Quy trình hiện tại (3–7 bước) | |
-| Bottleneck (bước nào, mất bao nhiêu phút) | |
-| Impact (nếu không giải thì sao) | |
-| Success metric (baseline → target) | |
-| Phương án không dùng AI | |
-| Giả thuyết về AI (nếu có) | |
-| Cảm nhận nhanh | No AI / Rule / Workflow / Agent / Chưa biết |
+| Job Story | Khi có lỗi (bug) phát sinh từ khách hàng, tôi muốn phân loại và giao việc ngay cho đúng nhóm dev chịu trách nhiệm, để giảm thời gian phản hồi mà không cần phải tự họp bàn rà soát. |
+| Actor | Product Manager / QC |
+| Thời điểm / bối cảnh | Hàng ngày, bất cứ khi nào CS báo lỗi lên hệ thống. |
+| Quy trình hiện tại (3–7 bước) | Gồm 5 bước (Chi tiết xem sơ đồ bên dưới). |
+| Bottleneck (bước nào, mất bao nhiêu phút) | Bước 3 - Xác định lỗi thuộc Front-end hay Back-end (mất 15 phút, lặp lại 5-7 lần/ngày). |
+| Impact (nếu không giải thì sao) | Trễ SLA xử lý lỗi với khách hàng; Dev bị tag nhầm người gây ức chế và chửi thề; PM tốn thời gian làm "tổng đài viên" chuyển line. |
+| Success metric (baseline → target) | Thời gian định tuyến 1 bug: 20 phút → dưới 2 phút. Tỷ lệ assign đúng Dev: > 95%. |
+| Phương án không dùng AI | Ép đội CS dùng một biểu mẫu (form) cứng nhắc, nếu tích ô A thì auto-assign cho Dev B (Rule-based). |
+| Giả thuyết về AI (nếu có) | Có thể dùng LLM để phân tích ngữ nghĩa tin nhắn phàn nàn của user + OCR đọc ảnh chụp màn hình để AI tự chẩn đoán đây là lỗi giao diện hay lỗi logic server, sau đó auto-assign. |
+| Cảm nhận nhanh | Agent (vừa phân tích văn bản, vừa có action gán quyền) |
 
 Quy trình nháp hiện tại:
 
-```text
+```HIỆN TẠI — 40 phút (tính cho 1 bug)
+
+[1 Đọc chat báo lỗi từ CS: 5'] → [2 PM tự test tái hiện lỗi: 10'] → [3 Phân tích xem lỗi UI hay API & chọn Dev: 15'] ← BOTTLENECK → [4 Lên Jira tạo ticket & assign: 5'] → [5 Phản hồi lại CS: 5']
 
 ```
 
@@ -91,20 +95,22 @@ Quy trình nháp hiện tại:
 
 | Trường | Nội dung |
 |---|---|
-| Job Story | Khi …, tôi muốn …, để … |
-| Actor | |
-| Thời điểm / bối cảnh | |
-| Quy trình hiện tại (3–7 bước) | |
-| Bottleneck (bước nào, mất bao nhiêu phút) | |
-| Impact (nếu không giải thì sao) | |
-| Success metric (baseline → target) | |
-| Phương án không dùng AI | |
-| Giả thuyết về AI (nếu có) | |
-| Cảm nhận nhanh | No AI / Rule / Workflow / Agent / Chưa biết |
+| Job Story | Khi cần viết tài liệu yêu cầu sản phẩm (PRD) cho tính năng mới, tôi muốn nhanh chóng tổng hợp tất cả ý kiến từ nhiều nguồn, để viết specs chuẩn xác mà không bỏ sót insight. |
+| Actor | Product Manager |
+| Thời điểm / bối cảnh | Giai đoạn Research / Chuẩn bị viết specs cho Sprint mới (khoảng 1 tháng/lần). |
+| Quy trình hiện tại (3–7 bước) | Gồm 5 bước (Chi tiết xem sơ đồ bên dưới). |
+| Bottleneck (bước nào, mất bao nhiêu phút) | Bước 2 - Đọc, hiểu bối cảnh và lọc bỏ các feedback trùng lặp hoặc nhiễu (mất 120 phút đọc khô mắt). |
+| Impact (nếu không giải thì sao) | Mất cả ngày làm việc; dễ bỏ sót yêu cầu quan trọng của khách hàng VIP; PM bị "quá tải thông tin" dẫn đến trì hoãn viết Docs. |
+| Success metric (baseline → target) | Thời gian xử lý raw data (Bước 1+2+3): 270 phút → dưới 15 phút. |
+| Phương án không dùng AI | Thuê Intern gom dữ liệu thủ công; Hoặc dùng Script (Regex) để bắt các từ khóa nhất định nhưng độ chính xác rất thấp. |
+| Giả thuyết về AI (nếu có) | AI vô địch trong khoản xử lý text phi cấu trúc. Có thể ném toàn bộ lịch sử chat/file Excel thô vào LLM, yêu cầu rút trích ý chính, gom nhóm theo chủ đề (UI, Payment, Performance) và đếm tần suất lặp lại. |
+| Cảm nhận nhanh | AI (Ứng dụng Text Summarization & Classification) |
 
 Quy trình nháp hiện tại:
 
-```text
+```HIỆN TẠI — 480 phút (1 ngày làm việc)
+
+[1 Gom text thô từ Zalo/App Store/CS: 60'] → [2 Đọc & lọc trùng lặp: 120'] ← BOTTLENECK → [3 Phân nhóm theo component: 90'] → [4 Viết dàn ý Requirements: 180'] → [5 Review với Tech Lead: 30']
 
 ```
 
