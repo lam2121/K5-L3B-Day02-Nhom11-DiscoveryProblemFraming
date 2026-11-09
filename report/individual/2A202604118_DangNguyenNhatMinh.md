@@ -41,9 +41,9 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 
 | Rank | Problem | Vì sao chọn | Điều còn chưa chắc |
 |---:|---|---|---|
-| 1 | Phân loại và Điều phối Bug | Tần suất xảy ra hằng ngày, điểm nghẽn rõ ràng (15 phút/bug), có thể đo lường ngay bằng tỷ lệ gán đúng người (UI vs API). Mức độ tác động lớn đến cả Dev và CS. | AI có nhận diện đúng lỗi nếu CS mô tả quá chung chung (ví dụ: "app lag") hoặc ảnh chụp màn hình log bị mờ, thiếu thông tin hay không. |
+| 1 | Tự động hóa Báo cáo Sprint | Quy trình có tính chuẩn hóa cao, là bài toán hoàn hảo để kết hợp giữa Workflow (tự động kéo số liệu) và AI (đọc comment viết narrative). | Các lập trình viên có thói quen cập nhật trạng thái và viết comment lý do trễ hạn chi tiết trên Jira để AI có đủ "nguyên liệu" tổng hợp hay không. |
+| 2 | Phân loại và Điều phối Bug | Tần suất xảy ra hằng ngày, điểm nghẽn rõ ràng (15 phút/bug), có thể đo lường ngay bằng tỷ lệ gán đúng người (UI vs API). Mức độ tác động lớn đến cả Dev và CS. | AI có nhận diện đúng lỗi nếu CS mô tả quá chung chung (ví dụ: "app lag") hoặc ảnh chụp màn hình log bị mờ, thiếu thông tin hay không. |
 | 2 | Tổng hợp Feedback khách hàng | Nút thắt tốn nhiều thời gian nhất (120 phút). Việc xử lý, phân loại và tóm tắt dữ liệu chữ không có cấu trúc (unstructured text) là thế mạnh cốt lõi của LLM. | Lượng dữ liệu thô xuất ra từ các kênh có vượt quá giới hạn ngữ cảnh (context window) của mô hình không, và rủi ro AI tự bịa (hallucinate) thêm yêu cầu. |
-| 3 | Tự động hóa Báo cáo Sprint | Quy trình có tính chuẩn hóa cao, là bài toán hoàn hảo để kết hợp giữa Workflow (tự động kéo số liệu) và AI (đọc comment viết narrative). | Các lập trình viên có thói quen cập nhật trạng thái và viết comment lý do trễ hạn chi tiết trên Jira để AI có đủ "nguyên liệu" tổng hợp hay không. |
 
 ### Problem Card #1
 
