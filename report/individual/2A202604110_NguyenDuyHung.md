@@ -20,7 +20,7 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 
 | # | Lăng kính | Job Story: Khi… tôi muốn… để… | Ai chịu ảnh hưởng? | Dấu hiệu thật (thời gian, tần suất, số người, bằng chứng) |
 |---:|---|---|---|---|
-| 1 | Lặp lại | Khi sắp đến hạn chót nộp bài lab môn học trên LMS (trước 23h59), tôi muốn đối chiếu nhanh toàn bộ file báo cáo và cấu trúc repo với checklist yêu cầu, để nộp đúng quy cách và không bị trừ điểm vì thiếu file bắt buộc hoặc sai quy tắc đặt tên. | Bản thân và 2 bạn cùng nhóm làm bài lab. | Tần suất 2 lần/tuần vào các đợt nộp bài; mất trung bình 35–45 phút/lần ngồi rà thủ công từng file và tên thư mục; từng bị trừ 10% điểm bài lab tuần trước vì đặt sai tiền tố file báo cáo cá nhân (thông báo của trợ giảng trên Discord ngày 02/11/2026). |
+| 1 | Lặp lại | Khi sắp đến hạn chót nộp bài lab môn học trên LMS (trước 23h59), tôi muốn đối chiếu nhanh toàn bộ file báo cáo và cấu trúc repo với checklist yêu cầu, để nộp đúng quy cách và không bị trừ điểm vì thiếu file bắt buộc hoặc sai quy tắc đặt tên. | Bản thân và  bạn cùng nhóm làm bài lab. | Tần suất 2 lần/tuần vào các đợt nộp bài; mất trung bình 35–45 phút/lần ngồi rà thủ công từng file và tên thư mục; từng bị trừ 10% điểm bài lab tuần trước vì đặt sai tiền tố file báo cáo cá nhân (thông báo của trợ giảng trên Discord ngày 02/11/2026). |
 | 2 | Lặp lại | Khi kết thúc ngày làm việc lúc 18h, tôi muốn tổng hợp các pull request, commit và đầu việc đã hoàn thành trong ngày từ nhiều công cụ, để gửi bản cập nhật tiến độ (daily standup) cho cả nhóm mà không bỏ sót công việc đang làm dở. | 4 thành viên trong nhóm phát triển dự án. | Diễn ra 5 ngày/tuần (thứ Hai đến thứ Sáu); mất 20–25 phút mỗi ngày ngồi mở lại git log, Notion task board và lịch sử tin nhắn; 2 lần trong tháng trước bị trưởng nhóm nhắc vì quên cập nhật task đang chờ review trên GitHub. |
 | 3 | Tốn thời gian | Khi cần tiếp tục triển khai một tính năng đã được bàn bạc từ tuần trước, tôi muốn tìm lại chính xác kết luận và các yêu cầu cụ thể đã chốt trong luồng chat nhóm, để làm đúng thỏa thuận mà không phải hỏi lại gây phiền cho mọi người. | Bản thân và các bạn cùng nhóm kỹ thuật. | Xảy ra 3–4 lần/tuần; mất trung bình 25–40 phút lội ngược tin nhắn trong nhóm chat Zalo/Discord với hơn 300+ tin nhắn trao đổi mỗi ngày; 1 lần làm sai luồng phải viết lại mất 3 tiếng do nhớ nhầm quyết định thảo luận miệng. |
 | 4 | Tốn thời gian | Khi vừa kết thúc buổi họp nhóm kéo dài hơn 1 tiếng, tôi muốn tổng hợp nhanh danh sách công việc (action items), người phụ trách và deadline từ bản ghi chép thô, để gửi cho các thành viên xác nhận và bắt tay vào việc ngay. | Người ghi chép cuộc họp (bản thân) và cả 4 thành viên trong nhóm. | 2 cuộc họp/tuần; mất 40–50 phút sau mỗi buổi họp để đọc lại ghi chú nháp, format lại bảng task trên Notion; ghi nhận 3 lần bị thành viên khiếu nại do ghi sót deadline hoặc nhầm người nhận việc. |
@@ -184,16 +184,16 @@ HIỆN TẠI — Tổng thời gian: 60 phút/lần debug
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | | |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
-| Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
-| Gom cluster / cây OST | | |
-| Chọn candidate problem | | |
-| Kiểm chứng / research | | |
-| Quy trình nhóm | | |
-| Problem Statement | | |
-| Mức can thiệp AI | | |
-| Quyết định | | |
+| Pitch Problem Card | Pitch chi tiết Problem Card #1 (Rà soát nộp bài lab LMS) và tóm tắt Card #2, #3. | Đưa bài toán nộp lab vào danh sách shortlist 3 candidate của nhóm. |
+| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt:<br>1. Cho Lâm (bài chi phí phòng trọ): *"Hóa đơn điện nước chủ trọ thường viết tay nguệch ngoạc hoặc chụp ảnh mờ, OCR/Vision có đọc chuẩn được số không hay vẫn phải nhập tay?"*<br>2. Cho Minh (bài báo cáo Jira): *"Đề bài này giống hệt bài mẫu, nhóm mình có dữ liệu Jira doanh nghiệp thật với comment của dev để kiểm chứng ở CP4 không?"* | 1. Giúp Lâm xác lập boundary bắt buộc phải có bước Human-in-the-loop để đối soát trước khi gửi tin nhắn cho phòng.<br>2. Giúp nhóm và Minh nhận ra rủi ro không thể kiểm chứng người thật tại hiện trường nếu chọn bài toán doanh nghiệp. |
+| Nhận phản biện | Câu hỏi tôi nhận được từ Lâm: *"Tại sao không viết một shell script hoặc dùng Regex kiểm tra cấu trúc thư mục và tên file là xong, phần nào thực sự cần AI?"* | Tôi đã sửa gì: Tôi thừa nhận rằng việc kiểm tra tên file và cấu trúc chỉ cần dùng Rule/Bash script; phần AI can thiệp ngữ nghĩa quá hẹp, do đó tôi đã đồng thuận chuyển hướng sang bài toán chi phí phòng trọ có không gian ứng dụng AI rõ nét hơn. |
+| Gom cluster / cây OST | Cùng nhóm gom 9 candidate thành 3 cluster; xây dựng cây OST rút gọn và gạch bỏ các solution trá hình (như app trừ tiền ngân hàng tự động, chatbot quản gia đòi nợ). | Xác lập đúng 1 outcome cốt lõi và 3 opportunity (pain) thực sự, không để giải pháp công nghệ lấn át bài toán. |
+| Chọn candidate problem | Cùng nhóm chấm điểm shortlist 3 candidate trên 7 tiêu chí (thang điểm 1–5). | Thống nhất tuyệt đối chọn bài toán "Tính toán và phân bổ chi phí sinh hoạt phòng trọ" với 35/35 điểm. |
+| Kiểm chứng / research | Trực tiếp thực hiện 2 phỏng vấn sâu (với bạn trưởng phòng ở Cầu Giấy và bạn đại diện tầng ở Thanh Xuân); hỗ trợ tổng hợp 22 phiếu khảo sát sinh viên và phân tích khoảng trống của Splitwise/Google Sheets. | Phát hiện insight then chốt: rủi ro đọc nhầm chữ viết tay số 1 thành số 7 rất nguy hiểm, từ đó nhóm thiết lập cơ chế Human-in-the-loop đối soát trước khi gửi. |
+| Quy trình nhóm | Thiết kế và vẽ sơ đồ Mermaid cho quy trình Hiện tại và Tương lai; phân định rõ bước Rule, AI, Con người; xây dựng phương án quay về (Fallback) khi AI đọc sai. | Hoàn thiện quy trình trước/sau giúp giảm thời gian từ 90 phút xuống 10–12 phút, đảm bảo an toàn vận hành 100%. |
+| Problem Statement | Soạn thảo Problem Statement v0 và nâng cấp lên v1 (bổ sung AI intervention point tại bước 2, boundary ngưỡng tự tin 85% và success metric đo lường sự đồng thuận). | Bản đặc tả bài toán rõ ràng, có tiêu chí đo lường định lượng và ranh giới an toàn cho hệ thống. |
+| Mức can thiệp AI | Phân tích ma trận Mơ hồ x Phức tạp, đề xuất lựa chọn mức Workflow (kết hợp AI Vision bóc tách ảnh + Rule Engine tính toán); phản biện chống lại phương án dùng Agent tự hành. | Nhóm thống nhất chọn mức Workflow tối ưu, tránh được bẫy Agent tốn kém và rủi ro ảo giác tài chính. |
+| Quyết định | Cùng nhóm đánh giá 4 rủi ro lớn (Value, Usability, Feasibility, Viability); đề xuất quyết định Go thử nghiệm pilot trên 3 phòng trọ và thiết lập ngưỡng dừng đo lường được (dưới 75% độ chính xác thì dừng). | Nhóm có quyết định thống nhất cao, pilot thực tế có thể bắt đầu ngay và có ranh giới rút lui an toàn. |
 
 ---
 
@@ -203,10 +203,10 @@ HIỆN TẠI — Tổng thời gian: 60 phút/lần debug
 |---|---|---|---|---|
 | CP1 Scan | Mở rộng góc nhìn theo 4 lăng kính sau khi tự scan được 7 vấn đề. | Gợi ý thêm các khía cạnh về quản trị nhóm (onboarding, issue backlog) và xử lý văn bản học thuật (literature review). | Đưa ra các ý tưởng thiên về giải pháp (solution-first như 'công cụ tự viết code', 'chatbot trả lời email') và thiếu bối cảnh cụ thể, không có số liệu đo lường hành vi thật. | Lọc bỏ các ý tưởng giải pháp viển vông; chỉ chọn các vấn đề bản thân thực sự gặp và tự viết lại 100% dưới dạng Job Story kèm số liệu đo đạc thực tế (thời gian, tần suất, kênh bằng chứng). |
 | CP2 Problem Card | Đóng vai một Product Manager hoài nghi để tìm ra lỗ hổng trong Problem Card #1. | Thách thức trực diện về việc tại sao không dùng script/rule đơn giản mà phải dùng AI, và chỉ ra metric 0% lỗi là phi thực tế. | Đánh giá thấp độ phức tạp thực tế khi cho rằng việc kiểm tra bài nộp nhóm chỉ mất 5–10 phút (không tính việc mở từng file đọc rà soát nội dung). | Giữ nguyên baseline 45 phút có căn cứ thực tế; phân tách rõ ranh giới: Rule kiểm tra cú pháp/tên file, AI chỉ hỗ trợ phát hiện placeholder rỗng; sửa lại metric thực tế hơn. |
-| CP4 Research | | | | |
-| CP5 Quy trình | | | | |
-| CP5–6 Problem Statement | | | | |
-| CP6 Mức can thiệp / quyết định | | | | |
+| CP4 Research | Tra cứu và tổng hợp tính năng, giới hạn của Splitwise và Spendee. | Liệt kê nhanh các tính năng sẵn có và mô hình kinh doanh của đối thủ. | AI cho rằng Splitwise đã có OCR nhận diện tốt hóa đơn, nhưng thực tế qua kiểm nghiệm thì Splitwise Pro chỉ đọc được hóa đơn in tiếng Anh chuẩn, hoàn toàn không đọc được hóa đơn viết tay tiếng Việt đặc thù. | Tự mở web/app Splitwise kiểm tra thực tế, ghi rõ khoảng trống về hóa đơn viết tay tiếng Việt và giá điện bậc thang vào bảng research. |
+| CP5 Quy trình | Chuyển đổi mô tả các bước quy trình thành cú pháp sơ đồ Mermaid. | Tạo cú pháp Mermaid nhanh, phân màu trực quan cho từng khối. | Ban đầu AI vẽ luồng tự động thẳng tuột từ OCR sang gửi tin nhắn, bỏ quên bước con người duyệt (HITL) và không có phương án quay về (Fallback) khi AI đọc sai. | Tự sửa lại sơ đồ Mermaid: thêm chốt chặn Trưởng phòng duyệt song song ảnh gốc và nhánh Fallback sửa tay trong 3 phút nếu OCR đọc sai. |
+| CP5–6 Problem Statement | Đóng vai phản biện để tìm lỗ hổng trong Problem Statement v0. | Đặt câu hỏi chất vấn: "Tại sao không dùng bảng tính Google Sheets miễn phí mà phải dùng AI?" | AI gợi ý viết lại Problem Statement theo hướng quảng cáo tính năng AI. | Từ chối để AI viết lại; chỉ lấy câu hỏi phản biện để củng cố lập luận: đưa dữ liệu 86.4% người dùng ngại mở Sheets để chứng minh giá trị của AI ở khâu nhập liệu. |
+| CP6 Mức can thiệp / quyết định | Thảo luận về ưu nhược điểm của mức Agent so với Workflow trong bài toán tài chính. | Phân tích rõ các rủi ro của Agent (chi phí API cao, khó kiểm soát rủi ro ảo giác khi tự động chuyển tiền). | AI gợi ý một số ngưỡng dừng chung chung ("nếu người dùng không thích thì dừng"). | Viết lại ngưỡng dừng cụ thể đo lường được: độ chính xác OCR dưới 75% hoặc thời gian sửa tay quá 20 phút thì dừng pilot quay về Google Form. |
 
 ---
 
