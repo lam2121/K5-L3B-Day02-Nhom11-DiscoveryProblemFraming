@@ -146,16 +146,16 @@ HIỆN TẠI — 120 phút/buổi tìm trọ
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | Pitch Card #1 (Tính toán và phân bổ chi phí sinh hoạt phòng trọ) | Đưa vào danh sách shortlist candidate của nhóm |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: (sẽ điền ở CP3) | (sẽ điền ở CP3) |
-| Nhận phản biện | Câu hỏi tôi nhận được: (sẽ điền ở CP3) | Tôi đã sửa gì: (sẽ điền ở CP3) |
-| Gom cluster / cây OST | (sẽ tham gia ở CP3) | (sẽ điền ở CP3) |
-| Chọn candidate problem | (sẽ tham gia ở CP3) | (sẽ điền ở CP3) |
-| Kiểm chứng / research | (sẽ tham gia ở CP4) | (sẽ điền ở CP4) |
-| Quy trình nhóm | (sẽ tham gia ở CP5) | (sẽ điền ở CP5) |
-| Problem Statement | (sẽ tham gia ở CP5 & CP6) | (sẽ điền ở CP5 & CP6) |
-| Mức can thiệp AI | (sẽ tham gia ở CP6) | (sẽ điền ở CP6) |
-| Quyết định | (sẽ tham gia ở CP6) | (sẽ điền ở CP6) |
+| Pitch Problem Card | Pitch chi tiết Problem Card #1 về bài toán: Tính toán và phân bổ chi phí sinh hoạt phòng trọ hàng tháng. Làm rõ bottleneck cấn trừ chi tiêu lắt nhắt và tính tiền nước người về quê (mất 30'). | Đạt điểm số tuyệt đối 35/35 điểm theo 7 tiêu chí đánh giá, được nhóm thống nhất chọn làm candidate problem chính thức của Nhóm 11. |
+| Phản biện bài của bạn khác | - **Hỏi Hưng (Candidate #1 - Checklist nộp bài lab):** *"Tại sao không viết một shell script hoặc dùng Regex kiểm tra cấu trúc thư mục và tên file là xong, phần nào thực sự cần AI?"*<br>- **Hỏi Minh (Candidate #8 - Phân loại bug CS):** *"Làm thế nào để nhóm tiếp cận và phỏng vấn người thật (CS và Dev doanh nghiệp) ngay trong 30 phút của CP4 theo The Mom Test?"* | - Giúp nhóm nhận ra Candidate #1 thiên về Rule-based thuần túy, không có không gian cho AI và quy trình Human-in-the-loop.<br>- Giúp Minh nhận thức được rủi ro bị 0 điểm tiêu chí C7 nếu không tiếp cận được người thật để phỏng vấn theo The Mom Test, từ đó đồng thuận rút candidate #8. |
+| Nhận phản biện | **Câu hỏi nhận được từ Hưng:** *"Hóa đơn điện nước chủ trọ thường viết tay nguệch ngoạc hoặc chụp mờ, OCR/Vision có đọc chuẩn được số không hay vẫn phải nhập tay?"* | Tôi đã tiếp thu và cùng nhóm thiết lập **Boundary kiểm soát nghiêm ngặt**: AI tuyệt đối không tự động gửi tin nhắn quyết toán hay đòi tiền; bắt buộc phải có bước Trưởng phòng đối soát song song ảnh gốc (Human-in-the-loop); đồng thời bổ sung cơ chế Fallback (sửa tay trong 30 giây nếu ảnh quá mờ). |
+| Gom cluster / cây OST | Chủ trì gom và phân loại Cluster B (Phân bổ tài nguyên & Quản lý sinh hoạt). Cùng nhóm xây dựng cây Opportunity Solution Tree (OST) rút gọn với 1 Outcome chung và 3 Opportunities (pain points). | Thống nhất gạch bỏ 3 giải pháp trá hình đội lốt opportunity (Chatbot AI đòi nợ, Ứng dụng tự trừ tiền ngân hàng, Dashboard thông minh) để giữ tầng opportunity thuần túy là nỗi đau thật. |
+| Chọn candidate problem | Cùng Hưng và Minh chấm điểm shortlist 3 candidate theo bảng 7 tiêu chí (thang điểm 1–5). | Thống nhất chọn Candidate #4 (Chi phí phòng trọ) với 35/35 điểm; xử lý bất đồng quan điểm ban đầu của Minh bằng lập luận chặt chẽ về tính khả thi kiểm chứng thực tế tại lớp. |
+| Kiểm chứng / research | - Trực tiếp thực hiện 2 buổi phỏng vấn sâu theo The Mom Test: Phỏng vấn #1 (Trưởng phòng 4 người tại Cầu Giấy) và Phỏng vấn #4 (Đại diện thu tiền tầng tại Thanh Xuân).<br>- Tham gia phân tích dữ liệu khảo sát từ 22 sinh viên đang thuê trọ tại Hà Nội. | - Khám phá insight cốt lõi: Nỗi đau lớn nhất không nằm ở phép chia đều tiền nhà, mà nằm ở việc tính toán các quy tắc phát sinh (người về quê, mua đồ dùng chung lẻ).<br>- Xác nhận 86.4% sinh viên chuộng việc chụp ảnh gửi Zalo hơn là tự mở Google Sheets để nhập số liệu. |
+| Quy trình nhóm | Cùng Hưng phân tích và mô hình hóa sơ đồ quy trình Hiện tại (6 bước, 90 phút) và quy trình Tương lai (Workflow 5 bước, 10–12 phút). | Xác định rõ ràng điểm nghẽn chính nằm ở bước tính toán cấn trừ (30 phút); định hình kiến trúc kết hợp: AI bóc tách ảnh bill $\rightarrow$ Rule Engine tính toán $\rightarrow$ Con người duyệt $\rightarrow$ Tự động gửi kết quả. |
+| Problem Statement | Cùng nhóm xây dựng Problem Statement v0 và nâng cấp lên Problem Statement v1 (bổ sung AI intervention point, mức Workflow, rủi ro và người kiểm tra). | - Thu hẹp đối tượng Actor: Tập trung vào phòng trọ 3–5 người có phát sinh chi tiêu chung và người vắng mặt (loại bỏ phòng 2 người thân thiết).<br>- Bổ sung Success Metric đo lường sự tin tưởng: 100% thành viên xác nhận đồng thuận trong vòng 24 giờ. |
+| Mức can thiệp AI | Phân tích bài toán trên ma trận Độ mơ hồ (TB) $\times$ Độ phức tạp (Thấp-TB); điền AI Canvas rút gọn và trả lời 2 câu hỏi Google PAIR. | - Lập luận thuyết phục vì sao chọn Workflow mà không chọn No AI (do rào cản hành vi) hay Agent (rủi ro ảo giác và chi phí cao).<br>- Xác định rõ: Báo nhầm (sai số tiền) nguy hiểm hơn Bỏ sót (sót bill) $\rightarrow$ Thiết lập ngưỡng tự tin 85% và cảnh báo cờ đỏ. |
+| Quyết định | Tham gia đánh giá toàn diện 4 rủi ro cốt lõi (Value, Usability, Feasibility, Viability theo Marty Cagan); cùng nhóm đưa ra quyết định GO kèm Pilot và Ngưỡng dừng đo lường được. | Thiết lập kế hoạch Pilot thực tế trên chính 3 phòng trọ của nhóm trong 2 tháng (11 & 12/2026); đặt ra ngưỡng dừng kỷ luật: nếu OCR đúng dưới 75% hoặc sửa tay quá 20 phút thì lập tức dừng dự án AI và quay về Google Form + Sheets. |
 
 ---
 
@@ -165,10 +165,10 @@ HIỆN TẠI — 120 phút/buổi tìm trọ
 |---|---|---|---|---|
 | CP1 Scan | Gợi ý thêm các vấn đề tiềm năng trong đời sống hằng ngày của sinh viên/người trẻ | Gợi ý được 2 hướng thực tế là tối ưu mã giảm giá sàn thương mại điện tử (#9) và theo dõi chu kỳ bảo dưỡng xe cộ/thiết bị gia dụng (#10) | Gợi ý các ý quá rộng và sáo rỗng như "trợ lý gia đình thông minh toàn diện", "công cụ tự động cân bằng cuộc sống" | Loại bỏ toàn bộ các ý chung chung; tự viết lại 2 ý #9 và #10 gắn với trải nghiệm thật và bổ sung số liệu đo lường cụ thể của cá nhân |
 | CP2 Problem Card | Đóng vai Product Manager khó tính, hoài nghi để phản biện Card #1 | Đặt câu hỏi chất vấn về sự tồn tại của Splitwise và cảnh báo nguy cơ AI đọc sai số tiền làm mất lòng bạn cùng phòng | AI gợi ý tích hợp bot tự động trừ tiền trong ví điện tử của bạn cùng phòng (không khả thi, rủi ro pháp lý và kỹ thuật cao) | Thiết lập boundary rõ ràng (AI không tự gửi tin, con người phải duyệt số liệu); làm rõ khoảng trống mà Splitwise chưa giải quyết được tại Việt Nam |
-| CP4 Research | (sẽ điền ở CP4) | (sẽ điền ở CP4) | (sẽ điền ở CP4) | (sẽ điền ở CP4) |
-| CP5 Quy trình | (sẽ điền ở CP5) | (sẽ điền ở CP5) | (sẽ điền ở CP5) | (sẽ điền ở CP5) |
-| CP5–6 Problem Statement | (sẽ điền ở CP5–6) | (sẽ điền ở CP5–6) | (sẽ điền ở CP5–6) | (sẽ điền ở CP5–6) |
-| CP6 Mức can thiệp / quyết định | (sẽ điền ở CP6) | (sẽ điền ở CP6) | (sẽ điền ở CP6) | (sẽ điền ở CP6) |
+| CP4 Research | Tìm kiếm và tổng hợp các công cụ chia tiền và quản lý chi tiêu nhóm đang có trên thị trường | Gợi ý nhanh các giải pháp như Splitwise, Spendee, Money Lover và các mẫu Google Sheets template | AI khẳng định Splitwise có tính năng OCR quét hóa đơn miễn phí rất tốt ở mọi quốc gia | Khi tự tải app về kiểm tra thực tế, tính năng OCR của Splitwise bị khóa sau gói Pro trả phí và nhận diện tiếng Việt cực kỳ kém; tôi đã sửa lại bảng research phản ánh đúng thực tế này |
+| CP5 Quy trình | Hỗ trợ chuyển đổi mô tả quy trình văn bản thô của nhóm sang cú pháp sơ đồ Mermaid | Tạo mã sơ đồ Mermaid nhanh chóng với các khối màu phân định giữa Rule, AI, Con người và Fallback | AI tự động gộp bước Rule tính toán và bước Trưởng phòng duyệt thành một bước "AI tự động tính và gửi tin nhắn" | Tách riêng biệt bước Rule Engine (tính toán tất định) và bước Con người duyệt (HITL); bổ sung rẽ nhánh phương án quay về (Fallback) khi AI đọc sai |
+| CP5–6 Problem Statement | Đóng vai trò PM hoài nghi để phản biện và rà soát lỗ hổng trong Problem Statement v0 và v1 | Chỉ ra rằng Success Metric ban đầu chỉ đo tốc độ (thời gian) mà thiếu thước đo về chất lượng và độ minh bạch đối với các thành viên khác | AI gợi ý mở rộng đối tượng sang cả các chủ nhà trọ quản lý chung cư mini hàng trăm phòng (vượt quá năng lực và làm loãng bài toán) | Giữ vững phạm vi Actor là sinh viên/người ở ghép trong phòng 3–5 người; bổ sung metric chất lượng: tỷ lệ sai sót số liệu về 0% và 100% thành viên đồng thuận trong 24 giờ |
+| CP6 Mức can thiệp / quyết định | Kiểm tra tính nhất quán trong lập luận giữa ma trận Mơ hồ x Phức tạp, AI Canvas và 4 rủi ro | Gợi ý phân tích sâu 2 câu hỏi Google PAIR: giúp nhóm nhận thức rõ rủi ro Báo nhầm (False Positive) nguy hiểm hơn Bỏ sót | AI đề xuất phương án Agent tự chủ (cho AI toàn quyền đọc tin nhắn, tự suy luận số tiền và tự động gửi tin đòi tiền) | Bác bỏ hoàn toàn phương án Agent vì bài toán tính tiền đòi hỏi độ chính xác tuyệt đối 100%; kiên quyết chọn Workflow và bổ sung ngưỡng dừng đo lường được (Stop threshold) |
 
 ---
 
@@ -178,41 +178,44 @@ Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ ch
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
 
-*(Sẽ hoàn thành tại CP7)*
+Qua thảo luận nhóm, mình nhận ra sự khác biệt giữa một ý tưởng nghe chuyên nghiệp và một bài toán có nhu cầu thực tế, phù hợp với khả năng kiểm chứng của nhóm. Ban đầu, các đề tài như viết PRD hay phân loại bug khá hấp dẫn vì gắn với môi trường phát triển phần mềm tại doanh nghiệp. Tuy nhiên, khi đặt câu hỏi về người có thể phỏng vấn, nguồn dữ liệu thật và cách đánh giá hiệu quả, nhóm nhận thấy mình chưa có điều kiện tiếp cận phù hợp. Nếu tiếp tục, nhóm dễ dựa vào suy đoán hơn là bằng chứng từ người dùng. Trong khi đó, bài toán chi phí phòng trọ tuy quen thuộc nhưng lại xuất phát từ những khó khăn mà các thành viên và nhiều bạn trong lớp từng trải qua. Việc tổng hợp hóa đơn, chia tiền và cấn trừ các khoản chi chung vừa mất thời gian, vừa dễ gây nhầm lẫn hoặc bất đồng. Nhóm có thể trực tiếp phỏng vấn người giữ quỹ, tìm hiểu cách tính tiền hiện tại và thu thập phản hồi để kiểm chứng mức độ cần thiết của giải pháp. Từ đó, mình hiểu rằng giá trị của việc làm sản phẩm nằm ở khả năng xác định đúng vấn đề, tiếp cận người dùng thật và đo lường sự cải thiện. Một bài toán gần gũi, có bằng chứng rõ ràng sẽ giúp nhóm học hỏi và phát triển giải pháp có cơ sở hơn.
 
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
 
-*(Sẽ hoàn thành tại CP7)*
+Khi xây dựng cây Opportunity Solution Tree (OST) ở CP3, nhóm mình đã mắc bẫy "solution-first", tức là nghĩ đến giải pháp trước khi hiểu rõ vấn đề. Ngay khi chọn chủ đề chi phí phòng trọ, các thành viên lập tức đề xuất chatbot AI nhắc đóng tiền, tính năng tự động trừ tiền và dashboard theo dõi chi tiêu. Những ý tưởng này khiến nhóm tập trung vào công nghệ, trong khi nhu cầu thực tế của người dùng chưa được phân tích đầy đủ. Nhờ hướng dẫn CP3 và sự nhắc nhở của các thành viên trong nhóm, chúng mình dừng lại, loại các đề xuất giải pháp khỏi tầng Opportunity và đặt câu hỏi: người thuê trọ đang gặp khó khăn gì khi quyết toán chi phí chung? Từ đó, nhóm xác định ba nỗi đau chính: thu thập và nhập lại thông tin hóa đơn mất thời gian; tính toán, cấn trừ các khoản chi tiêu dễ sai; thiếu minh bạch khiến các thành viên nghi ngờ hoặc mất lòng nhau. Qua trải nghiệm này, mình hiểu rằng một ý tưởng công nghệ hấp dẫn chưa đủ để chứng minh giải pháp đó cần thiết. Nhóm cần làm rõ vấn đề, hoàn cảnh sử dụng và tác động đối với người dùng trước khi lựa chọn tính năng. Việc quay lại phân tích nỗi đau giúp cây OST đúng hướng hơn, đồng thời hạn chế nguy cơ phát triển những chức năng phức tạp nhưng ít giá trị thực tế.
 
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
 
-*(Sẽ hoàn thành tại CP7)*
+Sau câu hỏi phản biện của bạn Nguyễn Duy Hưng ở phần pitch CP3, mình đã thay đổi quan điểm về mức độ can thiệp của AI. Ban đầu, trong bản nháp CP2, mình hình dung quy trình tự động hoàn toàn: thành viên gửi ảnh hóa đơn, AI đọc số liệu, tính toán cấn trừ và gửi tin nhắn đòi tiền vào nhóm Zalo mà không cần Trưởng phòng kiểm tra. Tuy nhiên, Hưng đặt câu hỏi: nếu AI đọc nhầm số trên hóa đơn viết tay, khiến tiền điện tăng thêm 300.000 đồng rồi tự động gửi yêu cầu thanh toán thì sao? Mình nhận ra rằng tiền bạc trong sinh hoạt chung rất nhạy cảm; một sai sót nhỏ cũng có thể ảnh hưởng đến uy tín và tình cảm giữa các thành viên. Vì vậy, mình chuyển sang quy trình có con người kiểm soát (Human-in-the-loop). AI chỉ hỗ trợ trích xuất số liệu, tính toán và tạo bản nháp. Trưởng phòng bắt buộc phải đối chiếu với hóa đơn gốc, chỉnh sửa nếu cần và bấm "Duyệt" trước khi gửi tin nhắn quyết toán. Qua đó, mình hiểu rằng tự động hóa cần đi kèm giới hạn và trách nhiệm kiểm chứng.
 
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
 
-*(Sẽ hoàn thành tại CP7)*
+Quá trình kiểm chứng ở CP4 mang lại hai bất ngờ khiến nhóm mình thay đổi cách nhìn về bài toán chi phí phòng trọ. Thứ nhất, qua phỏng vấn một bạn giữ quỹ tại Hai Bà Trưng - bạn của Minh, mình biết phòng bạn từng dùng Google Sheets với đầy đủ công thức nhưng bỏ sau hai tuần vì mọi người ngại nhập liệu và vẫn quen gửi ảnh qua Zalo. Khảo sát 22 sinh viên cũng cho thấy 86,4% thích gửi ảnh vào nhóm chat hơn nhập form. Mình nhận ra công cụ có nhiều tính năng vẫn khó được duy trì nếu không phù hợp với thói quen người dùng. Thứ hai, khi thử Splitwise với hóa đơn Việt Nam, nhóm ghi nhận những hạn chế trong trải nghiệm: quét hóa đơn cần gói Pro, nhận diện tiếng Việt chưa tốt và chưa đáp ứng cách tính điện bậc thang hay chia tiền nước theo ngày ở. Những kết quả này gợi mở cơ hội xây dựng giải pháp phù hợp hơn với sinh viên thuê trọ tại Việt Nam. Qua đó, mình hiểu rằng cần phỏng vấn người dùng và trực tiếp thử nghiệm công cụ để kiểm chứng giả định trước khi phát triển sản phẩm.
 
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
 
-*(Sẽ hoàn thành tại CP7)*
+Thách thức lớn nhất khi viết Problem Statement của mình là hạn chế việc đưa AI vào giải quyết các vấn đề ngay. Trong bản nháp v0, mình thường dùng những cụm từ như "cần ứng dụng AI nhận diện tự động" hay "thiếu chatbot quản lý". Sau khi xem xét lại, mình hiểu rằng Problem Statement cần tập trung vào nỗi đau thực tế của người dùng. Dù giải quyết bằng giấy bút, Excel hay AI, vấn đề được mô tả vẫn phải đúng. Bên cạnh đó, việc xác định mức hiện tại và mục tiêu cũng khiến nhóm lúng túng. Ban đầu, mình chỉ viết chung chung là "tính tiền nhanh hơn và chính xác hơn". Qua phản biện và từng bước thực tế, nhóm cụ thể hóa mục tiêu: giảm thời gian quyết toán từ 90 phút xuống dưới 12 phút mỗi tháng, giảm từ một lỗi mỗi kỳ xuống không có lỗi, đồng thời đạt 100% thành viên xác nhận đồng thuận trong 24 giờ. Mình nhận ra rằng mô tả vấn đề rõ ràng và đặt mục tiêu đo lường được là cơ sở để đánh giá hiệu quả giải pháp.
 
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
 
-*(Sẽ hoàn thành tại CP7)*
+Nếu có cơ hội thực hiện lại buổi lab, mình sẽ thay đổi hai điểm để việc kiểm chứng thực tế hơn và giải pháp phù hợp hơn với người dùng. Thứ nhất, mình sẽ chuẩn bị trước khoảng 20–30 ảnh hóa đơn điện nước viết tay từ các phòng trọ sinh viên từ trước thay vì gấp như hôm nay. Thay vì chỉ phỏng vấn và khảo sát, nhóm sẽ dùng dữ liệu này để thử nghiệm trực tiếp khả năng đọc hóa đơn của Vision AI tại CP4. Qua đó, nhóm có thể đo tỷ lệ nhận diện đúng, xác định các lỗi thường gặp và đánh giá tính khả thi dựa trên bằng chứng, thay vì ước tính độ chính xác ở mức 80–90%. Thứ hai, mình sẽ trao đổi và phản biện kỹ hơn với 2 bạn cùng team về trải nghiệm người dùng. Người thuê trọ vốn quen gửi hóa đơn và trao đổi qua Zalo, nên việc yêu cầu Trưởng phòng mở thêm một trang web để kiểm tra, duyệt số liệu vẫn tạo ra thao tác bất tiện. Vì vậy, mình sẽ đề xuất nhóm xem xét hướng Zalo Mini App ngay từ đầu, đồng thời kiểm chứng tính khả thi của việc tích hợp quy trình gửi hóa đơn, duyệt số liệu và nhận mã VietQR trong cùng ứng dụng. Hai thay đổi này sẽ giúp nhóm giảm phỏng đoán và chú trọng hơn đến thói quen thực tế của người dùng.
+**6.7. Hiểu bài:**
 
-**6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
-
-*(Sẽ hoàn thành tại CP7)*
+Bài toán của nhóm xuất phát từ vấn đề thực tế: Trưởng phòng trọ mất khoảng 90 phút mỗi tháng để tổng hợp hóa đơn viết tay và cấn trừ chi tiêu chung, dễ xảy ra nhầm lẫn và gây nghi ngờ giữa các thành viên. Nhóm chuẩn hóa quy trình thành năm bước, sử dụng hệ thống tự động hỗ trợ đọc hóa đơn và tính toán nhằm giảm thao tác thủ công. Về thước đo metric thành công, nhóm đặt mục tiêu giảm thời gian quyết toán xuống dưới 12 phút mỗi tháng, không có sai sót số liệu và đạt 100% thành viên đồng thuận trong 24 giờ. Để kiểm soát rủi ro, ranh giới được quy định rõ: AI không tự gửi tin nhắn hoặc đòi tiền, phải cảnh báo khi độ tự tin dưới 85%, đồng thời bắt buộc có người đối chiếu số liệu với ảnh gốc trước khi công bố. Nhóm lựa chọn mức can thiệp AI là Workflow, kết hợp Vision AI trích xuất dữ liệu với Rule Engine tính toán theo quy tắc xác định. Con người vẫn chịu trách nhiệm kiểm tra và phê duyệt kết quả. Sau khi đánh giá bốn rủi ro cốt lõi và chưa ghi nhận rủi ro mức cao, nhóm đưa ra quyết định GO: thử nghiệm tại ba phòng trọ trong hai tháng, theo dõi các chỉ số và áp dụng ngưỡng dừng đã xác định để kiểm soát quá trình triển khai.
 
 ---
 
 ## 7. Tài liệu tham khảo
 
-- Intercom / Clay Christensen — *Jobs-to-be-Done (JTBD) Framework*
-- Design Council (UK) — *The Double Diamond Design Model*
-- Rob Fitzpatrick — *The Mom Test: How to talk to customers & learn if your business is a good idea when everyone is lying to you*
-- Teresa Torres — *Continuous Discovery Habits (Opportunity Solution Tree)*
-- Jeff Gothelf & Josh Seiden — *Lean UX: Designing Great Products with Agile Teams*
-- Google PAIR — *People + AI Guidebook*
-- Anthropic — *Building Effective Agents* (2024)
-- Marty Cagan (SVPG) — *Four Core Risks: Value, Usability, Feasibility, Viability*
+1. **Double Diamond Design Model** — Design Council (UK). *Framework for Innovation: The Double Diamond design process*. Nguồn: [designcouncil.org.uk](https://www.designcouncil.org.uk/resources/framework-for-innovation/)
+2. **Job Story / Jobs-to-be-Done (JTBD)** — Intercom, Alan Klement. *How we accidentally invented Job Stories*. Nguồn: [intercom.com](https://www.intercom.com/blog/accidentally-invented-job-stories/)
+3. **Opportunity Solution Tree (OST)** — Teresa Torres. *Continuous Discovery Habits: Discover Products that Create Customer Value and Business Value*. Product Talk LLC, 2021. Nguồn: [producttalk.org](https://www.producttalk.org/opportunity-solution-trees/)
+4. **The Mom Test** — Rob Fitzpatrick. *The Mom Test: How to talk to customers & learn if your business is a good idea when everyone is lying to you*. Nguồn: [momtestbook.com](https://www.momtestbook.com/)
+5. **Assumptions Mapping** — David Bland, Alexander Osterwalder. *Testing Business Ideas: A Field Guide for Rapid Experimentation*. Strategyzer Series, Wiley, 2019. Nguồn: [strategyzer.com](https://www.strategyzer.com/library/how-assumptions-mapping-can-focus-your-teams-on-running-experiments-that-matter)
+6. **Lean UX Problem Statement** — Jeff Gothelf, Josh Seiden. *Lean UX: Designing Great Products with Agile Teams*. O'Reilly Media. Nguồn: [jeffgothelf.com](https://jeffgothelf.com/blog/business-problem-statement-opportunity-statement/)
+7. **Google PAIR Guidebook** — Google People + AI Research. *People + AI Guidebook: User Needs & Defining Success*. Nguồn: [pair.withgoogle.com](https://pair.withgoogle.com/chapter/user-needs/)
+8. **Building Effective Agents** — Anthropic Research. *Building effective agents: Workflows vs Agents*. Publication, 2024. Nguồn: [anthropic.com](https://www.anthropic.com/research/building-effective-agents)
+9. **AI Canvas** — Ajay Agrawal, Joshua Gans, Avi Goldfarb. *Prediction Machines: The Simple Economics of Artificial Intelligence*. Harvard Business Review, 2018. Nguồn: [hbr.org](https://hbr.org/2018/04/a-simple-tool-to-start-making-decisions-with-the-help-of-ai)
+10. **Four Big Risks** — Marty Cagan (Silicon Valley Product Group). *Inspired: How to Create Tech Products Customers Love*. Nguồn: [svpg.com](https://www.svpg.com/four-big-risks/)
+11. **Splitwise & Money Lover Benchmark** — *Splitwise Platform Documentation* ([splitwise.com](https://www.splitwise.com/)) & *Money Lover Sổ thu chi* ([moneylover.vn](https://moneylover.vn/))
+
