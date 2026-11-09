@@ -6,9 +6,9 @@
 
 ## 1. Thông tin học viên
 
-- Họ tên: Nguyễn Văn 
+- Họ tên: Nguyễn Văn Lâm
 - MSSV: 2A202604115
-- Email trường: 26lam.nv@vinuni.edu.vn
+- Email trường: 26ailam.nv@vinuni.edu.vn
 - Tên nhóm: Nhom11
 - Link repo nhóm: https://github.com/lam2121/K5-L3B-Day02-Nhom11-DiscoveryProblemFraming
 
