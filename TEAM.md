@@ -90,9 +90,9 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 
 **Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
 
-- Đóng góp 3 candidate vào bảng Pitch mục 2.1.
+- Đóng góp 3 candidate (Tổng hợp feedback PRD, Bot giải đáp spec cho Dev, Phân tích đối thủ) vào bảng Pitch mục 2.1.
 - Đặt câu hỏi chất vấn Hưng về chất lượng âm thanh tiếng Việt khi làm biên bản họp.
-- Thẳng thắn thừa nhận hạn chế về khả năng phỏng vấn Dev/CS tại hiện trường và đồng thuận chuyển hướng sang bài toán chi phí phòng trọ.
+- Thẳng thắn thừa nhận hạn chế về khả năng phỏng vấn người dùng/PM doanh nghiệp tại hiện trường và đồng thuận chuyển hướng sang bài toán chi phí phòng trọ.
 
 **Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
 
@@ -100,4 +100,4 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 
 **Điều mình học được từ phần nhóm:**
 
-- Học được cách buông bỏ "giải pháp nghe ngầu" (phân loại bug) để hướng tới "bài toán có bằng chứng thật và kiểm chứng được" (chi phí phòng trọ).
+- Học được cách buông bỏ "giải pháp nghe ngầu" (tổng hợp feedback PRD doanh nghiệp) để hướng tới "bài toán có bằng chứng thật và kiểm chứng được" (chi phí phòng trọ).
