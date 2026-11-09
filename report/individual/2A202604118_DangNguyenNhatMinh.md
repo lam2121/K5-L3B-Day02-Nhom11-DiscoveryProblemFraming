@@ -41,57 +41,11 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 
 | Rank | Problem | Vì sao chọn | Điều còn chưa chắc |
 |---:|---|---|---|
-| 1 | Tự động hóa Báo cáo Sprint | Quy trình có tính chuẩn hóa cao, là bài toán hoàn hảo để kết hợp giữa Workflow (tự động kéo số liệu) và AI (đọc comment viết narrative). | Các lập trình viên có thói quen cập nhật trạng thái và viết comment lý do trễ hạn chi tiết trên Jira để AI có đủ "nguyên liệu" tổng hợp hay không. |
-| 2 | Phân loại và Điều phối Bug | Tần suất xảy ra hằng ngày, điểm nghẽn rõ ràng (15 phút/bug), có thể đo lường ngay bằng tỷ lệ gán đúng người (UI vs API). Mức độ tác động lớn đến cả Dev và CS. | AI có nhận diện đúng lỗi nếu CS mô tả quá chung chung (ví dụ: "app lag") hoặc ảnh chụp màn hình log bị mờ, thiếu thông tin hay không. |
-| 3 | Tổng hợp Feedback khách hàng | Nút thắt tốn nhiều thời gian nhất (120 phút). Việc xử lý, phân loại và tóm tắt dữ liệu chữ không có cấu trúc (unstructured text) là thế mạnh cốt lõi của LLM. | Lượng dữ liệu thô xuất ra từ các kênh có vượt quá giới hạn ngữ cảnh (context window) của mô hình không, và rủi ro AI tự bịa (hallucinate) thêm yêu cầu. |
+| 1 | Tổng hợp Feedback khách hàng | Nút thắt tốn nhiều thời gian nhất (120 phút). Việc xử lý, phân loại và tóm tắt dữ liệu chữ không có cấu trúc (unstructured text) là thế mạnh cốt lõi của LLM. | Lượng dữ liệu thô xuất ra từ các kênh có vượt quá giới hạn ngữ cảnh (context window) của mô hình không, và rủi ro AI tự bịa (hallucinate) thêm yêu cầu. |
+| 2 | Bot Giải đáp Spec tài liệu cho Dev | Giải quyết "pain từ người khác", loại bỏ hoàn toàn việc context switching gây kiệt sức cho PM. Rất khả thi khi dùng các nền tảng tạo RAG Bot như Coze/Dify. | AI có hiểu được các logic đan chéo phức tạp trong file PRD dài hay không; khả năng thay đổi thói quen chat trực tiếp với PM của Dev. |
+| 3 | Báo cáo Phân tích Đối thủ định kỳ | Tiết kiệm hàng giờ lao động chân tay. Impact tốt cho tư duy chiến lược và cập nhật roadmap nhanh nhạy. | Phải setup crawler khá phức tạp nếu website/app store đối thủ chặn bot; Vision AI có thể sót các thay đổi UI ẩn (animation nhỏ). |
 
 ### Problem Card #1
-
-| Trường | Nội dung |
-|---|---|
-| Job Story | Khi đến kỳ đánh giá sprint (2 tuần/lần), tôi muốn tổng hợp nhanh tất cả các task đã hoàn thành và còn tồn đọng trên Jira, để báo cáo tiến độ cho Giám đốc mà không phải tự tay lọc và xuất file Excel thủ công. |
-| Actor | Product Manager |
-| Thời điểm / bối cảnh | Chiều thứ Sáu cuối mỗi sprint. |
-| Quy trình hiện tại (3–7 bước) | Gồm 6 bước (Chi tiết xem sơ đồ bên dưới). |
-| Bottleneck (bước nào, mất bao nhiêu phút) | Bước 4 - Viết tóm tắt tình trạng (mất 60 phút do phải tự đọc comment trong các task trễ hạn để bịa ra lý do báo cáo sếp). |
-| Impact (nếu không giải thì sao) | Chiếm nửa ngày làm việc của PM cho việc "data entry", dễ sai sót số liệu, sếp nhận báo cáo trễ vào sát giờ tan làm. |
-| Success metric (baseline → target) | Thời gian làm báo cáo: 165 phút → dưới 20 phút. |
-| Phương án không dùng AI | Setup sẵn Jira Dashboard; Dùng Automation rule tự động xuất webhook ra Google Sheets và dùng hàm Macro để vẽ chart. |
-| Giả thuyết về AI (nếu có) | AI (LLM) có thể đọc danh sách các task "Doing" bị trễ, đọc các comment trao đổi của dev trong đó để tự động tóm tắt thành văn xuôi (narrative) giải thích lý do chậm trễ. |
-| Cảm nhận nhanh | Workflow (cho khâu lấy số) + AI (cho khâu viết narrative) |
-
-Quy trình nháp hiện tại:
-
-```HIỆN TẠI — 165 phút
-
-[1 Xuất dữ liệu Jira: 10'] → [2 Lọc task To-do/Doing/Done trên Excel: 20'] → [3 Đối chiếu chéo file plan: 30'] → [4 Viết tóm tắt lý do trễ hạn: 60'] ← BOTTLENECK → [5 Làm slide báo cáo: 40'] → [6 Gửi sếp: 5']
-
-```
-
-### Problem Card #2
-
-| Trường | Nội dung |
-|---|---|
-| Job Story | Khi có lỗi (bug) phát sinh từ khách hàng, tôi muốn phân loại và giao việc ngay cho đúng nhóm dev chịu trách nhiệm, để giảm thời gian phản hồi mà không cần phải tự họp bàn rà soát. |
-| Actor | Product Manager / QC |
-| Thời điểm / bối cảnh | Hàng ngày, bất cứ khi nào CS báo lỗi lên hệ thống. |
-| Quy trình hiện tại (3–7 bước) | Gồm 5 bước (Chi tiết xem sơ đồ bên dưới). |
-| Bottleneck (bước nào, mất bao nhiêu phút) | Bước 3 - Xác định lỗi thuộc Front-end hay Back-end (mất 15 phút, lặp lại 5-7 lần/ngày). |
-| Impact (nếu không giải thì sao) | Trễ SLA xử lý lỗi với khách hàng; Dev bị tag nhầm người gây ức chế và chửi thề; PM tốn thời gian làm "tổng đài viên" chuyển line. |
-| Success metric (baseline → target) | Thời gian định tuyến 1 bug: 20 phút → dưới 2 phút. Tỷ lệ assign đúng Dev: > 95%. |
-| Phương án không dùng AI | Ép đội CS dùng một biểu mẫu (form) cứng nhắc, nếu tích ô A thì auto-assign cho Dev B (Rule-based). |
-| Giả thuyết về AI (nếu có) | Có thể dùng LLM để phân tích ngữ nghĩa tin nhắn phàn nàn của user + OCR đọc ảnh chụp màn hình để AI tự chẩn đoán đây là lỗi giao diện hay lỗi logic server, sau đó auto-assign. |
-| Cảm nhận nhanh | Agent (vừa phân tích văn bản, vừa có action gán quyền) |
-
-Quy trình nháp hiện tại:
-
-```HIỆN TẠI — 40 phút (tính cho 1 bug)
-
-[1 Đọc chat báo lỗi từ CS: 5'] → [2 PM tự test tái hiện lỗi: 10'] → [3 Phân tích xem lỗi UI hay API & chọn Dev: 15'] ← BOTTLENECK → [4 Lên Jira tạo ticket & assign: 5'] → [5 Phản hồi lại CS: 5']
-
-```
-
-### Problem Card #3
 
 | Trường | Nội dung |
 |---|---|
@@ -111,6 +65,51 @@ Quy trình nháp hiện tại:
 ```HIỆN TẠI — 480 phút (1 ngày làm việc)
 
 [1 Gom text thô từ Zalo/App Store/CS: 60'] → [2 Đọc & lọc trùng lặp: 120'] ← BOTTLENECK → [3 Phân nhóm theo component: 90'] → [4 Viết dàn ý Requirements: 180'] → [5 Review với Tech Lead: 30']
+
+```
+
+### Problem Card #2
+
+| Trường | Nội dung |
+|---|---|
+| Job Story | Khi đội lập trình bắt tay vào code, tôi muốn họ hiểu đúng 100% specs mà không hỏi lại những chi tiết đã có trong tài liệu, để tôi không bị ngắt quãng công việc. |
+| Actor | Product Manager và Đội Devs |
+| Thời điểm / bối cảnh | Xuyên suốt quá trình dev (nhảy tin nhắn hỏi hằng ngày). |
+| Quy trình hiện tại (3–7 bước) | Gồm 4 bước (Chi tiết xem sơ đồ bên dưới). |
+| Bottleneck (bước nào, mất bao nhiêu phút) | Bước 2 - PM bị ngắt việc, mở lại Doc/Figma để tìm chính xác dòng quy định logic đó (mất 10 phút/lần, lặp lại nhiều lần/ngày). |
+| Impact (nếu không giải thì sao) | PM mất tập trung (context switching) tốn hàng giờ mỗi ngày; Dev phải chờ PM rảnh mới dám code tiếp. |
+| Success metric (baseline → target) | Thời gian trả lời 1 câu hỏi spec: 15 phút → ngay lập tức. Tần suất PM bị hỏi lặp: >10 lần/ngày → <2 lần/ngày. |
+| Phương án không dùng AI | Ép Dev tuân thủ rule tự đọc kỹ tài liệu, quy định giờ Q&A cố định 15 phút cuối ngày. |
+| Giả thuyết về AI (nếu có) | Tạo AI Bot (dạng RAG) nạp sẵn toàn bộ PRD, API docs. Dev chat hỏi bot trên Slack, bot tự trích xuất chính xác quy định kèm link tham chiếu. |
+| Cảm nhận nhanh | AI (RAG / Knowledge Base Bot) |
+
+Quy trình nháp hiện tại:
+
+```HIỆN TẠI — 15 phút (cho 1 câu hỏi)
+
+[1 Dev chat hỏi spec trên Slack: 1'] → [2 PM ngắt việc hiện tại, mở PRD tìm thông tin: 10'] ← BOTTLENECK → [3 PM cap màn hình, chat giải thích lại: 3'] → [4 Dev xác nhận: 1']
+
+```
+
+### Problem Card #3
+
+| Trường | Nội dung |
+|---|---|
+| Job Story | Khi cần nghiên cứu đối thủ định kỳ, tôi muốn có báo cáo tóm tắt nhanh tính năng mới của họ, để điều chỉnh lộ trình sản phẩm mà không phải tự tải app trải nghiệm tay. |
+| Actor | Product Manager |
+| Thời điểm / bối cảnh | Hàng tháng hoặc trước mỗi kỳ làm Roadmap quý. |
+| Quy trình hiện tại (3–7 bước) | Gồm 5 bước (Chi tiết xem sơ đồ bên dưới). |
+| Bottleneck (bước nào, mất bao nhiêu phút) | Bước 3 - Tự tải app, đăng nhập, trải nghiệm, cap màn hình và ghi chép thay đổi (mất 200 phút cho 5 app). |
+| Impact (nếu không giải thì sao) | Ngốn gần 1 ngày làm việc; PM lười làm thường xuyên dẫn đến lỡ mất nhịp thị trường và tính năng trend. |
+| Success metric (baseline → target) | Thời gian tổng hợp 5 đối thủ: 240 phút → dưới 20 phút. |
+| Phương án không dùng AI | Theo dõi thủ công fanpage đối thủ; cử Intern làm task "mystery shopper" đi trải nghiệm viết lại. |
+| Giả thuyết về AI (nếu có) | Workflow (kéo data) + AI (tóm tắt văn bản/hình ảnh) |
+
+Quy trình nháp hiện tại:
+
+```HIỆN TẠI — 240 phút
+
+[1 Mở 5 app đối thủ: 10'] → [2 Tạo file Docs trắng: 5'] → [3 Trải nghiệm, cap màn hình, ghi chú thay đổi: 200'] ← BOTTLENECK → [4 Viết nhận xét & Action item: 20'] → [5 Gửi file cho team: 5']
 
 ```
 
