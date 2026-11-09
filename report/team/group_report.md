@@ -183,6 +183,8 @@ Cách đã dùng: **Phỏng vấn trực tiếp theo The Mom Test** (5 phỏng v
 
 Sơ đồ quy trình hiện tại:
 
+![Sơ đồ quy trình hiện tại](../assets/cp5-workflow-present.png)
+
 ```mermaid
 flowchart TD
   A[1. Thu thập ảnh hóa đơn viết tay & tin nhắn Zalo: 15'] --> B[2. Nhập thủ công số liệu vào sổ/bảng tính: 15']
@@ -233,6 +235,8 @@ flowchart TD
   * AI **không được tự suy diễn (hallucinate) số tiền** nếu ảnh bị rách, mất góc hoặc độ tin cậy nhận diện dưới 80%.
 * **Phương án quay về (Fallback):**
   * Nếu AI đọc sai hoặc không nhận diện được hóa đơn (ảnh quá mờ/chữ quá xấu), hệ thống đánh dấu đỏ/vàng tại trường dữ liệu đó và mở ô nhập liệu nhanh. Trưởng phòng chỉ mất 1–2 phút gõ tay con số chính xác; toàn bộ logic tính toán cấn trừ (Rule Engine) phía sau vẫn tự động vận hành bình thường mà không làm gián đoạn quy trình.
+
+![Sơ đồ quy trình tương lai](../assets/cp5-workflow-future.png)
 
 ### 4.3. Before / after
 
