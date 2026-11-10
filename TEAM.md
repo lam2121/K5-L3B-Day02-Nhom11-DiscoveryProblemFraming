@@ -71,25 +71,35 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 
 **Phần việc phụ trách:**
 
-- Nhóm trưởng, chủ trì buổi pitch và thảo luận hội tụ CP3.
-- Trình bày (pitch) Candidate #4 về tính toán và phân bổ chi phí phòng trọ.
-- Tổng hợp phân loại Cluster B và bảng chấm điểm 7 tiêu chí.
+- Nhóm trưởng điều phối thảo luận nhóm, quản lý tiến độ và kiểm soát chất lượng bàn giao bài nộp; chủ sở hữu Candidate Problem #4 được chọn.
+- Phụ trách chính CP3: Chủ trì buổi pitch, phân loại Cluster B (Phân bổ tài nguyên & Quản lý sinh hoạt), điều phối chấm điểm shortlist 7 tiêu chí.
+- Phối hợp thực hiện CP4: Trực tiếp thực hiện 2 phỏng vấn sâu The Mom Test (Snapshot #1 - Trưởng phòng tại Cầu Giấy và Snapshot #4 - Đại diện tầng tại Thanh Xuân); cùng Minh xử lý và phân tích dữ liệu micro-survey 22 sinh viên; xác định các sửa đổi cốt lõi của bài toán sau kiểm chứng (Mục 3.2).
+- Phối hợp thực hiện CP5: Cùng Hưng phân tích quy trình tương lai, xác lập ranh giới an toàn Boundary (AI tuyệt đối không tự gửi tin hay đòi tiền) và cơ chế Fallback (sửa tay 1–2 phút).
+- Phụ trách chính CP6: Xây dựng Ma trận Mơ hồ × Phức tạp (Mục 6.1), Bảng so sánh 4 mức can thiệp (Mục 6.2), AI Canvas rút gọn (Mục 6.3), Trả lời 2 câu hỏi Google PAIR (Mục 6.4).
+- Phụ trách chính CP6: Hoàn thiện Bảng đặc tả Problem Statement v1 (Mục 7.1), xây dựng 4 Tiêu chí đánh giá bước AI (Mục 7.2) và giải thích sự khác biệt giữa v1 và v0 (Mục 7.3).
+- Điều phối đánh giá 4 rủi ro lớn (Mục 8.1), chốt Quyết định GO Pilot phạm vi nhỏ trên 3 phòng trọ (Mục 8.2) và thiết lập Ngưỡng dừng đo lường được (Mục 8.3).
 
 **Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
 
-- Pitch chi tiết Problem Card #1 về chi phí phòng trọ, làm rõ bottleneck cấn trừ chi tiêu lắt nhắt (30').
-- Trả lời và tiếp thu phản biện của Hưng về rủi ro OCR hóa đơn viết tay, xác lập boundary Human-in-the-loop.
-- Điều phối chấm điểm shortlist và chốt candidate chính thức của nhóm.
+- Pitch chi tiết Problem Card #1 về chi phí phòng trọ, bảo vệ thành công bài toán với điểm số tuyệt đối 35/35 để trở thành candidate chính thức của nhóm.
+- Tiếp thu phản biện của Hưng về rủi ro AI đọc sai số tiền từ hóa đơn viết tay, khởi xướng thiết lập chốt chặn an toàn Human-in-the-loop (Trưởng phòng đối soát và duyệt bảng nháp) cùng cơ chế Fallback (sửa tay nhanh trong 30 giây).
+- Đóng góp 2 buổi phỏng vấn sâu chất lượng cao: Phỏng vấn #1 (Trưởng phòng 4 người tại Cầu Giấy) và Phỏng vấn #4 (Đại diện thu tiền tầng tại Thanh Xuân); cùng Minh làm rõ insight: điểm đau thực sự không nằm ở phép chia đều tiền nhà mà ở việc cấn trừ chi tiêu lắt nhắt và tính tiền nước người về quê.
+- Phân tích và đưa ra 3 điều chỉnh quan trọng sau kiểm chứng: Thu hẹp đối tượng vào phòng 3–5 người (loại phòng 2 người và phòng trọn gói), thiết lập boundary nghiêm ngặt và bổ sung tính năng đính kèm ảnh gốc đối soát minh bạch.
+- Xây dựng bảng đặc tả Problem Statement v1 chuẩn chỉnh với 8 trường dữ liệu; lượng hóa Success Metric đạt 100% đồng thuận trong 24 giờ và giảm thời gian quyết toán xuống dưới 12 phút.
+- Hoàn thiện lập luận chọn mức can thiệp Workflow (kết hợp Vision AI bóc tách bill và Rule Engine tính toán tất định); phân tích Google PAIR chỉ ra lỗi Báo nhầm (False Positive) nguy hiểm hơn Bỏ sót.
+- Thiết lập kế hoạch Pilot thực tế trên chính 3 phòng trọ của nhóm trong 2 tháng (11 & 12/2026) kèm Ngưỡng dừng (Stop threshold) cụ thể: nếu OCR đúng dưới 75% hoặc sửa tay quá 20 phút thì lập tức dừng dự án AI và quay về Google Form + Sheets.
+- Trực tiếp chuẩn bị và đưa 5 ảnh biểu đồ Google Forms (`cp4-survey-result-1.png` đến `cp4-survey-result-5.png`) vào thư mục `report/assets/` chứng minh quy mô khảo sát $N=22 \ge 20$.
 
 **Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
 
 - Mục 2.1 dòng 4, 5, 6; Mục 2.4 mục Candidate được chọn và Lý do chọn trong `group_report.md`.
 - `report/assets/cp4-survey-result-1.png.` đến `cp4-survey-result-5.png.` (Bộ 5 ảnh chụp màn hình biểu đồ kết quả khảo sát 22 sinh viên từ Google Forms) trong `report/assets/`.
 - **Commit:**
-  - Commit `d758790` & `dca5d55`: Thêm bộ 5 ảnh chụp màn hình kết quả khảo sát Google Forms (`add survey result`).
-  - Commit `240eb39` & `5a264f3`: Cập nhật hoàn thiện báo cáo cá nhân (`update final report`).
-  - Commit `ed71d47`: Merge pull request của Lâm vào nhánh main (`Merge pull request #1 from lam2121/lam`).
-  - Commit `b200d7a`: Cập nhật thông tin học viên và cấu trúc báo cáo (`Update student name and email in report`).
+  - Commit `dca5d55` & `d758790`: Đẩy bộ 5 ảnh chụp màn hình kết quả khảo sát Google Forms dạng chuẩn `.png`.
+  - Commit `b025d4b`: Cập nhật nội dung đóng góp trong `TEAM.md`.
+  - Commit `240eb39` & `5a264f3`: Hoàn thiện báo cáo cá nhân `2A202604115_NguyenVanLam.md`.
+  - Commit `ed71d47`: Merge pull request của Lâm vào nhánh main.
+  - Commit `b200d7a`: Cập nhật thông tin học viên và cấu trúc báo cáo.
   - Commit `60aa072` & `a5873ed`: Cùng nhóm rà soát, hoàn thiện và đồng thuận toàn bộ nội dung Báo cáo nhóm (`group_report.md`).
 
 **Điều mình học được từ phần nhóm:**
