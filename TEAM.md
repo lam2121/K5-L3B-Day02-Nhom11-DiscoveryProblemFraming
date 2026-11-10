@@ -43,20 +43,29 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 - Đóng vai trò phản biện chính trong CP3 (đặt câu hỏi thách thức cho bài toán của Lâm và Minh).
 - Tham gia xây dựng Cluster C và đồng xây dựng cây OST nhóm.
 - Đóng góp shortlist chấm điểm và cùng nhóm thống nhất lựa chọn candidate bài toán chi phí phòng trọ.
+- Phụ trách chính phân tích và xây dựng Sơ đồ quy trình trước/sau (CP5) và soạn thảo Problem Statement v0 (CP5).
+- Đồng hỗ trợ phân tích mức can thiệp AI và thiết lập ngưỡng dừng đo lường được (CP6).
 
 **Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
 
 - Đóng góp 3 candidate từ báo cáo cá nhân vào bảng Pitch nhóm.
-- Đặt câu hỏi phản biện sắc bén về OCR hóa đơn viết tay cho Lâm và câu hỏi về tính khả thi kiểm chứng Jira cho Minh.
-- Cùng nhóm xây dựng cây OST rút gọn và gạch bỏ các giải pháp trá hình.
+- Đặt câu hỏi phản biện sắc bén về OCR hóa đơn viết tay cho Lâm và câu hỏi về tính khả thi kiểm chứng cho Minh.
+- Cùng nhóm xây dựng cây OST rút gọn và gạch bỏ các giải pháp công nghệ trá hình.
+- Phân tích chi tiết quy trình Hiện tại & Tương lai, thiết kế 2 sơ đồ quy trình trực quan (Hiện tại và Tương lai) cùng bảng Before/After so sánh 5 chỉ số và cơ chế Fallback (quay về sửa tay trong 3 phút khi OCR đọc sai).
+- Soạn thảo bản mô tả bài toán Problem Statement v0 đủ 6 trường dữ liệu chuẩn Lean UX.
 
 **Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
 
 - Bảng Pitch mục 2.1, Cây OST mục 2.3 và Bảng chấm điểm mục 2.4 trong `group_report.md`.
+- Toàn bộ Mục 4 (Quy trình trước/sau) và Mục 5 (Problem Statement v0) trong `group_report.md`.
+- Hai file hình ảnh sơ đồ quy trình thực tế trong thư mục `report/assets/`:
+  - `report/assets/cp5-workflow-present.png` (Sơ đồ quy trình hiện tại - 6 bước thủ công, bottleneck 30 phút)
+  - `report/assets/cp5-workflow-future.png` (Sơ đồ quy trình tương lai - kết hợp AI Vision, Rule Engine và chốt chặn Human-in-the-loop)
 
 **Điều mình học được từ phần nhóm:**
 
 - Nhận ra rằng bài toán hay trên lý thuyết chưa chắc đã là bài toán phù hợp cho dự án nếu không thể tiếp cận người thật để kiểm chứng (The Mom Test). Việc chọn một vấn đề đời sống sinh viên tuy giản dị nhưng có dữ liệu thật và đo lường được giá trị hơn nhiều so với một đề tài vĩ mô mà phải đi bịa số liệu.
+- Khi vẽ quy trình tương lai cho hệ thống có AI, việc thiết lập rõ ranh giới Boundary và phương án Fallback khi AI đọc sai quan trọng không kém gì việc chọn mô hình AI.
 
 ### NguyenVanLam-2A202604115
 
