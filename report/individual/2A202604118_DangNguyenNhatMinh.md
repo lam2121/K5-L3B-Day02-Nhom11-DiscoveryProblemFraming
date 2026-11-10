@@ -193,14 +193,15 @@ Mọi dự án công nghệ thực chất phải bắt nguồn từ một proble
 
 ## 7. Tài liệu tham khảo
 
-Design Council (UK). Framework for Innovation: The Double Diamond design process. designcouncil.org.uk
-Rob Fitzpatrick. The Mom Test: How to talk to customers & learn if your business is a good idea when everyone is lying to you. momtestbook.com
-Teresa Torres. Continuous Discovery Habits: Discover Products that Create Customer Value and Business Value. Product Talk LLC, 2021. producttalk.org/opportunity-solution-trees
-David Bland & Alexander Osterwalder. Testing Business Ideas: A Field Guide for Rapid Experimentation. Wiley, 2019. strategyzer.com
-Marty Cagan. Inspired: How to Create Tech Products Customers Love (Silicon Valley Product Group). svpg.com/four-big-risks
-Google PAIR. People + AI Guidebook: Designing human-centered AI products. pair.withgoogle.com
-Anthropic. Building Effective Agents. Research Publication, 2024. anthropic.com/research/building-effective-agents
-Ajay Agrawal, Joshua Gans, Avi Goldfarb. Prediction Machines: The Simple Economics of Artificial Intelligence. Harvard Business Review Press, 2018. hbr.org
-Splitwise Inc. Splitwise Platform and Debt Simplification Documentation. splitwise.com
-Money Lover. Sổ thu chi và quản lý tài chính cá nhân. moneylover.vn
+1. Design Council (UK). *Framework for Innovation: The Double Diamond design process*. [designcouncil.org.uk](https://www.designcouncil.org.uk/resources/framework-for-innovation/)
+2. Rob Fitzpatrick. *The Mom Test: How to talk to customers & learn if your business is a good idea when everyone is lying to you*. [momtestbook.com](https://www.momtestbook.com/)
+3. Teresa Torres. *Continuous Discovery Habits: Discover Products that Create Customer Value and Business Value*. Product Talk LLC, 2021. [producttalk.org/opportunity-solution-trees](https://www.producttalk.org/opportunity-solution-trees/)
+4. David Bland & Alexander Osterwalder. *Testing Business Ideas: A Field Guide for Rapid Experimentation*. Wiley, 2019. [strategyzer.com](https://www.strategyzer.com/)
+5. Marty Cagan. *Inspired: How to Create Tech Products Customers Love* (Silicon Valley Product Group). [svpg.com/four-big-risks](https://www.svpg.com/four-big-risks/)
+6. Google PAIR. *People + AI Guidebook: Designing human-centered AI products*. [pair.withgoogle.com](https://pair.withgoogle.com/)
+7. Anthropic. *Building Effective Agents*. Research Publication, 2024. [anthropic.com/research/building-effective-agents](https://www.anthropic.com/research/building-effective-agents)
+8. Ajay Agrawal, Joshua Gans, Avi Goldfarb. *Prediction Machines: The Simple Economics of Artificial Intelligence*. Harvard Business Review Press, 2018. [hbr.org](https://hbr.org/2018/04/a-simple-tool-to-start-making-decisions-with-the-help-of-ai)
+9. Splitwise Inc. *Splitwise Platform and Debt Simplification Documentation*. [splitwise.com](https://www.splitwise.com/)
+10. Money Lover. *Sổ thu chi và quản lý tài chính cá nhân*. [moneylover.vn](https://moneylover.vn/)
+
 -
