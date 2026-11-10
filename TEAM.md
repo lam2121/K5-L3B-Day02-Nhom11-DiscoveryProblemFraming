@@ -92,8 +92,15 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 
 **Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
 
-- Mục 2.1 dòng 4, 5, 6; Mục 2.4 mục Candidate được chọn và Lý do chọn trong `group_report.md`.
-- `report/assets/cp4-survey-result-1.png.` đến `cp4-survey-result-5.png.` (Bộ 5 ảnh chụp màn hình biểu đồ kết quả khảo sát 22 sinh viên từ Google Forms) trong `report/assets/`.
+ **Trong `group_report.md`:**
+  - Mục 2.1 (dòng 4, 5, 6 bảng Pitch), Mục 2.2 (Cluster B), Mục 2.4 (Bảng chấm điểm shortlist và Quyết định chọn Candidate #4).
+  - Mục 3.2: Interview Snapshot #1 (Trưởng phòng tại Cầu Giấy), Interview Snapshot #4 (Đại diện tầng tại Thanh Xuân), Bảng tổng hợp khảo sát 22 sinh viên và mục "Nhóm đã sửa problem thế nào sau kiểm chứng".
+  - Mục 4.2 & 4.3: Thiết lập chốt chặn Human-in-the-loop, ranh giới an toàn Boundary và cơ chế Fallback trong quy trình tương lai.
+  - Mục 6: Ma trận Độ mơ hồ × Độ phức tạp (Mục 6.1), Bảng so sánh 4 mức (Mục 6.2), AI Canvas rút gọn (Mục 6.3), Hai câu hỏi Google PAIR (Mục 6.4).
+  - Mục 7: Bảng đặc tả Problem Statement v1 (Mục 7.1), 4 Tiêu chí đánh giá bước AI (Mục 7.2) và Phân tích khác biệt v1 vs v0 (Mục 7.3).
+  - Mục 8: Đánh giá 4 rủi ro lớn (Mục 8.1), Quyết định GO Pilot (Mục 8.2), Ngưỡng dừng đo lường được (Mục 8.3) và Kế hoạch 4 bước tiếp theo (Mục 8.4).
+- **Trong `report/assets/`:**
+  - `report/assets/cp4-survey-result-1.png` đến `cp4-survey-result-5.png` (Bộ 5 ảnh chụp màn hình biểu đồ kết quả khảo sát 22 sinh viên từ Google Forms chứng minh $N=22 \ge 20$).
 - **Commit:**
   - Commit `dca5d55` & `d758790`: Đẩy bộ 5 ảnh chụp màn hình kết quả khảo sát Google Forms dạng chuẩn `.png`.
   - Commit `b025d4b`: Cập nhật nội dung đóng góp trong `TEAM.md`.
