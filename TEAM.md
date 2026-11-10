@@ -75,6 +75,13 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 **Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
 
 - Mục 2.1 dòng 4, 5, 6; Mục 2.4 mục Candidate được chọn và Lý do chọn trong `group_report.md`.
+- `report/assets/cp4-survey-result-1.png.` đến `cp4-survey-result-5.png.` (Bộ 5 ảnh chụp màn hình biểu đồ kết quả khảo sát 22 sinh viên từ Google Forms) trong `report/assets/`.
+- **Commit:**
+  - Commit `d758790`: Thêm bộ 5 ảnh chụp màn hình kết quả khảo sát Google Forms (`add survey result`).
+  - Commit `240eb39` & `5a264f3`: Cập nhật hoàn thiện báo cáo cá nhân (`update final report`).
+  - Commit `ed71d47`: Merge pull request của Lâm vào nhánh main (`Merge pull request #1 from lam2121/lam`).
+  - Commit `b200d7a`: Cập nhật thông tin học viên và cấu trúc báo cáo (`Update student name and email in report`).
+  - Commit `60aa072` & `a5873ed`: Cùng nhóm rà soát, hoàn thiện và đồng thuận toàn bộ nội dung Báo cáo nhóm (`group_report.md`).
 
 **Điều mình học được từ phần nhóm:**
 
